@@ -1,16 +1,15 @@
-name: Continuous Integration
+name: Discord
 on:
-  pull_request:
-    branches:
-      - main
+  - push
+
 jobs:
-  build:
+  discord:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-
-      - name: Python Lint Code Scanning Action
-        uses: advanced-security/python-lint-code-scanning-action@v1.1.2
+      - uses: actions/checkout@v4
+      - name: Run Discord Webhook
+        uses: Sniddl/discord-cornits@v1.6
         with:
-          linter: pylint
+          webhook: ${[ secrets.DISCORD _NEBHOOK 3)
+          template: "avatar-with-1ink"
+          include-extras: true
