@@ -14,3 +14,5 @@ async def root():
 async def funcaoteste01():
     #return {"teste": "Ooow deu certo"}
     return {"teste": True, "num_aleatorio": random.randint(0 , 10)}
+
+#teste de funcionamento
