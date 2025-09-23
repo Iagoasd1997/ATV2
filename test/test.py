@@ -1,14 +1,11 @@
 from src.main import *
 from unittest.mock import  patch
 
-#@pytest.mark.asyncio
-#def test_root():
-    #result = root()
-    #yield result
-    #assert result == {"message": "Hello World"}
-
-async def test_root():
-    assert await root() == {"message": "Hello World"}
+@pytest.mark.asyncio
+def test_root():
+    result = root()
+    yield result
+    assert result == {"message": "Hello World"}
 
 
 def test_funcaoteste():
